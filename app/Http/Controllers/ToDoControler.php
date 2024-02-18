@@ -19,24 +19,23 @@ class ToDoControler extends Controller
     {
         return $this->todo::where('user_id', $id)->get();
     }
-    
-        //
-    
+
+    //
+
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-        $data=[
-            'user_id'=>$request->user_id,
-            'title'=>$request->title,
-            'description'=>$request->description,
-             'due_date'=>$request->due_date,
-             'is_completed'=>false
+        $data = [
+            'user_id' => $request->user_id,
+            'title' => $request->title,
+            'description' => $request->description,
+            'due_date' => $request->due_date,
+            'is_completed' => false
         ];
         return $this->todo->create($data);
-       
     }
 
     /**

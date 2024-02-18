@@ -91,13 +91,19 @@ export default function Signup() {
                     <div className="row form-group" id="btn">
                         <div className="col-auto">
                             <div className="col-auto">
-                                <button className="btn btn-secondary" id="can" type="reset">
+                                <button
+                                    className="btn btn-secondary"
+                                    id="can"
+                                    type="reset"
+                                >
                                     Cancel
                                 </button>
                             </div>
                         </div>
                         <div className="col-auto">
-                            <button id="log" className="btn btn-primary">Signup</button>
+                            <button id="log" className="btn btn-primary">
+                                Signup
+                            </button>
                         </div>
                     </div>
                 </form>

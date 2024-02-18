@@ -14,9 +14,9 @@ class authController extends Controller
 {
     public function login(LoginRequst $request)
     {
-      $data = $request->validated();    
+        $data = $request->validated();
 
-        if(!Auth::attempt($data)){
+        if (!Auth::attempt($data)) {
             return response(['message' => 'Invalid credentials'], 401);
         }
 
@@ -25,18 +25,15 @@ class authController extends Controller
         $token =  $user->createToken('main')->plainTextToken;
 
         return response(compact('user', 'token'));
-
-
-
     }
-   
+
 
     public function signup(SignupRequest $request)
     {
         $data = $request->validated();
 
         /** @var \App\Models\User $user */
-        $user=   User::create([
+        $user =   User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password'])
@@ -45,16 +42,14 @@ class authController extends Controller
         $token =    $user->createToken('main')->plainTextToken;
 
         return response(compact('user', 'token'));
-
     }
 
     public function logout(request $request)
     {
         /** @var User $user */
-        $user=$request->user();
+        $user = $request->user();
         $user->currentAccessToken()->delete;
 
         return response('', 204);
     }
-    
 }
