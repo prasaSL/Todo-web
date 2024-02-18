@@ -1,0 +1,67 @@
+#GPage{
+    height: 100vh;
+    background-color: azure;
+}
+
+h1{
+  
+    text-align: center;
+    
+    
+}
+
+#btn{
+   
+ position: relative;
+ 
+}
+
+button{
+   
+    right: 1rem;
+    top: 1rem;
+    border: none;
+    color: #ff0000;
+    font-size: 20px;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+#log{
+   
+    border: none;
+    
+    
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+
+#can{
+
+    
+    border: none;
+ 
+   
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+#Sign{
+    border: none;
+    
+    
+    border-radius: 5px;
+    font-weight: bolder;}
+
+#Scansal{
+    border: none;
+    
+    
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+.card{
+    background-color: aquamarine;
+}
